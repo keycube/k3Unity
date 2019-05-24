@@ -38,13 +38,8 @@ public class ReadSerial : MonoBehaviour
 		_continue = true;
 
 		readThread.Start();
+	}
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void Read()
     {
@@ -64,7 +59,7 @@ public class ReadSerial : MonoBehaviour
 
 	public IEnumerator ThisWillBeExecutedOnTheMainThread(string message)
     {
-		Debug.Log(message);
+		Debug.Log("ReadSerial: " + message);
 
 		OnRead(message);
 		
