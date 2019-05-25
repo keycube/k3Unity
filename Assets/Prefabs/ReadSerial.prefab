@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1099046352375730}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.031475574, y: -0.037199706, z: 0.048862875}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c1847daffda4b4dac1d189c42990b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  port: /dev/cu.wchusbserial1410
+  port: 
   baudrate: 9600
   readTimeout: 500
   writeTimeout: 500
