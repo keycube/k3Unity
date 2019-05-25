@@ -18,6 +18,14 @@ public class Keycube : MonoBehaviour {
 	
 	private void ReadSerial_OnRead(string message)
 	{
-		Debug.Log("Keycube: " + message);
+		if (message[0] == '+') 
+		{
+			Debug.Log("Keycube: " + message.Substring(1));
+			GameObject key = transform.Find("Matrix/" + message[1] + "/" + message.Substring(1)).gameObject;
+			if (key != null)
+			{
+				key.SetActive(!key.activeSelf);
+			}				
+		}
 	}
 }
