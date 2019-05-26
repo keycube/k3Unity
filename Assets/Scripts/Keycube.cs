@@ -15,17 +15,31 @@ public class Keycube : MonoBehaviour {
 		}
 	}
 	
-	
 	private void ReadSerial_OnRead(string message)
 	{
-		if (message[0] == '+') 
+		switch(message[0])
 		{
-			Debug.Log("Keycube: " + message.Substring(1));
-			GameObject key = transform.Find("Matrix/" + message[1] + "/" + message.Substring(1)).gameObject;
-			if (key != null)
+			// Read keys event
+			case '+':
 			{
-				key.SetActive(!key.activeSelf);
-			}				
+				GameObject key = transform.Find("Matrix/" + message[1] + "/" + message.Substring(1)).gameObject;
+				if (key != null)
+				{
+					key.SetActive(!key.activeSelf);
+				}				
+			}
+			break;
+
+			// Read inertial values
+			case '*':
+			{
+				// TODO
+				// ...
+				// message.Split(':')
+				// float.Parse(...)
+				// ...
+			}
+			break;
 		}
 	}
 }
