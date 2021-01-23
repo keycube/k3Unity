@@ -47,7 +47,7 @@ public class ReadSerial : MonoBehaviour
         {
             try
             {
-                string message = _serialPort.ReadTo(".");
+                string message = _serialPort.ReadTo("$");
                 UnityMainThreadDispatcher.Instance().Enqueue(ThisWillBeExecutedOnTheMainThread(message));
             }
             catch (TimeoutException)
